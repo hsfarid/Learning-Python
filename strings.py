@@ -63,13 +63,6 @@ print(name[:4])
 #slice to the end
 print(name[0:])
 
-
-#Slicing strings
-name = "Fareed"
-print(name[2:])
-print(name[:6])
-print(name[2:5])
-
 #Negative Indexing
 #Use negative indexes to start the slice from the end of the string:
 print(name[-4:-3])
