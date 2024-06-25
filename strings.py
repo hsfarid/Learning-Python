@@ -53,3 +53,15 @@ print("free" not in a)
 txt = "The best things in the world are free"
 if 'bad' not in txt:
     print("No, 'bad' is not present.")
+
+#SLICING STRINGS
+name = "Fareed"
+#slice from start
+print(name[0:4])
+print(name[:4])
+#slice to the end
+print(name[0:])
+
+#Negative Indexing
+#Use negative indexes to start the slice from the end of the string:
+print(name[-3:-2])
