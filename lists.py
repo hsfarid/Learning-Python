@@ -78,31 +78,31 @@ print(cars)
 # Remove Specified Index
 # The pop() method removes the specified index.
 #If you do not specify the index, the pop() method removes the last item.
-# cars.pop(5)
-# print(cars)
+cars.pop(5)
+print(cars)
 # The del keyword also removes the specified index:
-# del cars[2]
-# print(cars)
+del cars[2]
+print(cars)
 #the del keyword can also delete the entire list
-# del cars
-# print(cars)
+del cars
+print(cars)
 
 #clear the list
-# cars.clear()
-# print(cars)
+cars.clear()
+print(cars)
 
 #LOOPING THROUGH LISTS
-# for car in cars:
-#     print(car)
+for car in cars:
+    print(car)
 
-# for i in range(len(cars)):
-#     print(cars[i])
+for i in range(len(cars)):
+    print(cars[i])
 
 #Using while loop
-# i = 0
-# while i < len(cars):
-#     print(cars[i])
-#     i += 1
+i = 0
+while i < len(cars):
+    print(cars[i])
+    i += 1
 
 #List comprehension
 [print(car) for car in cars]
@@ -112,23 +112,23 @@ print(cars)
 fruits = ["apple", "cherry", "banana", "mango", "pineaple", "grapes"]
 newList = []
 
-# for fruit in fruits:
-#     if "a" in fruit:
-#         newList.append(fruit) 
-# print(newList)
+for fruit in fruits:
+    if "a" in fruit:
+        newList.append(fruit) 
+print(newList)
 
 # With list comprehension you can do all that with only one line of code:
-# newList = [fruit for fruit in fruits if "a" in fruit]
+newList = [fruit for fruit in fruits if "a" in fruit]
 
 # The Syntax
 # newlist = [expression for item in iterable if condition == True]
 # The return value is a new list, leaving the old list unchanged.
 # Condition
 # The condition is like a filter that only accepts the items that valuate to True.
-# newlist = [fruit for fruit in fruits]
-# print(newlist)
-# newlist = [fruit for fruit in fruits if fruit != "apple"]
-# print(newlist)
+newlist = [fruit for fruit in fruits]
+print(newlist)
+newlist = [fruit for fruit in fruits if fruit != "apple"]
+print(newlist)
 
 newlist = [x for x in range(10) if x < 5]
 print(newlist)
@@ -137,3 +137,44 @@ print(newlist)
 # The expression is the current item in the iteration, but it is also the outcome, which you can manipulate before it ends up like a list item in the new list:
 newlist = [fruit.upper() for fruit in fruits]
 print(newlist)
+
+# Sorting lists
+newList = ["banana", "apple", "cherry", "watermelon"]
+newList.sort()
+print(newList)
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort()
+print(thislist)
+
+# Sort Descending
+# To sort descending, use the keyword argument reverse = True:
+thislist.sort(reverse = True)
+print(thislist)
+
+# Reverse order
+newList.reverse()
+print(newList)
+
+# Copy a List
+# You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.
+newList1 = newList.copy()
+print(newList1)
+
+# Join Two Lists
+# There are several ways to join, or concatenate, two or more lists in Python.
+# One of the easiest ways are by using the + operator.
+list1 = [1,2,3]
+list2 = ['a', 'b', 'c']
+list3 = list1 + list2
+print(list3)
+
+# Another way to join two lists is by appending all the items from list2 into list1, one by one:
+for x in list2:
+    list1.append(x)
+print(list1)
+
+# Or you can use the extend() method, where the purpose is to add elements from one list to another list:
+list1.extend(list2)
+print(list1)
+
