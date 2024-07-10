@@ -124,4 +124,3 @@ print(a.count('o'))
 print(a.casefold())
 print(a.lower())
 print(a.endswith('d'))
-
