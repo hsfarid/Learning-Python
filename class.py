@@ -90,24 +90,24 @@
 # bat.run()
 
 #example
-class Dog:
-    def make_sound(self):
-        return "dog sound"
+# class Dog:
+#     def make_sound(self):
+#         return "dog sound"
 
-class Bird:
-    def make_sound(self):
-        return "bird sound"
+# class Bird:
+#     def make_sound(self):
+#         return "bird sound"
 
-class Cat:
-    def make_sound(self):
-        return "cat sound"
+# class Cat:
+#     def make_sound(self):
+#         return "cat sound"
 
-def let_them_speak(sounds):
-    for sound in sounds:
-        print(sound.make_sound())
+# def let_them_speak(sounds):
+#     for sound in sounds:
+#         print(sound.make_sound())
 
 
-let_them_speak([Dog(), Cat(), Bird()])
+# let_them_speak([Dog(), Cat(), Bird()])
 
 # practice exercises 
 # constructors and destructors 
@@ -140,5 +140,23 @@ let_them_speak([Dog(), Cat(), Bird()])
 # book1  = Book("be obsessed or get average", "Rash", 765)
 # print(book1.__repr__())
 # print(book1)
+
+#classmethods
+class Person:
+    count = 0
+
+    def __init__(self, name):
+        self.name = name 
+        Person.count += 1
+        
+    @classmethod
+    def display_count(cls):
+        print(f"Total persons created: {cls.count}")
+
+person1 = Person("Alice")
+person2 = Person("Rick")
+Person.display_count()
+
+
 
 
